@@ -19,6 +19,11 @@ public class PostController {
     @Autowired
     SearchRepositoryImpl searchRepository;
 
+    @GetMapping("/")
+    public String home(){
+        return "Hello there!";
+    }
+
     @GetMapping("/getPosts")
     public List<Post> getAllPosts(){
         return repository.findAll();
